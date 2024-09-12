@@ -1,0 +1,32 @@
+def samplex():
+    mn=0 # Lowest value of domain
+    mx=1 # Highest value of domain
+    bound=1 # Upper bound of PDF value
+    while True: # Do the following until a value is returned
+       # Choose an X inside the desired sampling domain.
+       x=random.uniform(mn,mx)
+       # Choose a Y between 0 and the maximum PDF value.
+       y=random.uniform(0,bound)
+       # Calculate PDF
+       pdf=(math.exp(-((5*x-2.5)**2))/( math.sqrt((1/25)*math.pi) ) )
+       # Does (x,y) fall in the PDF?
+       if y<pdf:
+           # Yes, so return x
+           return x
+       # No, so loop
+def sampley():
+    mn=0 # Lowest value of domain
+    mx=1 # Highest value of domain
+    bound=2.82 # Upper bound of PDF value
+    while True: # Do the following until a value is returned
+       # Choose an X inside the desired sampling domain.
+       x=random.uniform(mn,mx)
+       # Choose a Y between 0 and the maximum PDF value.
+       y=random.uniform(0,bound)
+       # Calculate PDF
+       pdf=(math.exp(5 * (x-1) ) )
+       # Does (x,y) fall in the PDF?
+       if y<pdf:
+           # Yes, so return x
+           return x
+       # No, so loop
